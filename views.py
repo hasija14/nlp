@@ -37,10 +37,10 @@ def index(request):
 
 class Twitter(object):
     def __init__(self):
-        consumer_key = 'ld1zkuXAAG3A7qGHCexctSqQh'
-        consumer_secret = 'eNCOrafTK1kwm91bVEzCXLInRq7NE4bjTaNLAtXdLp0r6T5Q1t'
-        access_token = '1102609043590246402-WjOaXwQ69gMAAfCDIGVlCbQqO6bjpt'
-        access_token_secret = '49MocWPrF2Z1k9gBvOWFjiHta20dFNveQGY1lsx01E4zY'
+        consumer_key = '####################'
+        consumer_secret = '########################'
+        access_token = '############################'
+        access_token_secret = '#########################'
 
         try:
             self.auth = OAuthHandler(consumer_key, consumer_secret)
