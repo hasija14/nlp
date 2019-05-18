@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+{%extends "base.html"%}
+{% load staticfiles %}
+{%block styles%}
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+
+{%endblock%}
+
+{%block body_block%}
+<div class="cover">
+
+
+<div class=" container mx-auto" style="text-align:center" >
+
+  <h1>ABOUT SENTIMENT ANALYSIS</h1>
+  <br>
+  <h3>Tweepy</h3><p>Python is a great programming language for fast text data processing. Active developer communities create many useful libraries that extend the language for various applications. One of those libraries is Tweepy. It is open-sourced and hosted on Github. Tweepy provides an easy way for your python code to talk to Twitter through its APIs</p>
+<br>
+  <h3>TextBlob</h3><p>TextBlob is a Python (2 and 3) library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.</p>
+<div class="mx-auto" style="width: 500px;">
+  <iframe align="middle" width="100%" height="350px" src="{{MEDIA_URL}}about.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+
+{%endblock%}

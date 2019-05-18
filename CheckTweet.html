@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+{%extends "base.html"%}
+{% load staticfiles %}
+{%block styles%}
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/check.css' %}"/>
+
+{%endblock%}
+
+
+{%block body_block%}
+<video autoplay muted loop id="myVideo">
+    <source src="{{MEDIA_URL}}vid4.mp4" type="video/mp4">
+  </video>
+    <div class="content">
+<div class="container">
+  <h1 style="color:#1da1f2;text-align:center;">Check Your Tweet </h1>
+
+
+
+  <form class="form-inline" method="POST">
+     {{formm.as_p}}<hr>
+     {%csrf_token%}
+<input style="font-size:15px; font-weight: bold;margin-left:auto;margin-right:50;display:block;margin-top:5%;margin-bottom:5% ;width: 15em;  height: 3em;" class="btn btn-primary shadow-lg  mb-5 rounded"  type="submit" value="SEARCH">
+    </form>
+    <br><br>
+<h1 style="font-style:italic; color:#1da1f2;">TWEET IS : {{polarity}}</h1>
+</div>
+</div>
+{%endblock%}

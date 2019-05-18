@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+{%extends "base.html"%}
+{% load staticfiles %}
+
+{%block body_block%}
+<br><br>
+<h1 style="text-align:center; color:#1da1f2;">TWITTER SENTIMENT ANALYSIS</h1>
+<br>
+<br>
+<div class="container">
+	<form class="form-inline " method="POST">
+		 <h4 style="color:#1da1f2;">{{form}}</h4>
+		 {%csrf_token%}
+		<input style="font-size:15px; font-weight: bold;margin-left:auto;margin-right:50;display:block;margin-top:6%;margin-bottom:5% ;width: 15em;  height: 3em;" class="btn btn-primary shadow-lg  mb-5 rounded"  type="submit" value="SEARCH">
+		</form>
+
+
+</div>
+	  <!-- Content here -->
+		<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<div class="container">
+{% if tweets %}
+{%for tweet in tweets%}
+
+{%if tweet.1 == "positive"%}
+<p class="text-success">{{tweet.0}}</p>
+{%elif tweet.1 == "neutral"%}
+<p class="text-warning">{{tweet.0}}</p>
+{%elif tweet.1 == "negative"%}
+<p class="text-danger">{{tweet.0}}</p>
+{%endif%}
+
+{% endfor%}
+{%endif%}
+
+{%endblock%}
